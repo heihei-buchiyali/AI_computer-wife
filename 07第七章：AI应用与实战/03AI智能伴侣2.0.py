@@ -24,7 +24,7 @@ st.set_page_config(
 
 
 #loge
-st.logo("AI智能伴侣资料/gaomuLOGO.jpg", size="large")
+st.logo("07第七章：AI应用与实战/AI智能伴侣资料/gaomuLOGO.jpg", size="large")
 
 
 #生成会话标识的函数
@@ -162,11 +162,11 @@ if 'user_name' not in st.session_state:
 
 #初始化用户头像路径
 if 'user_avatar' not in st.session_state:
-    st.session_state.user_avatar ="AI智能伴侣资料/pengyuyan头像.jpg"
+    st.session_state.user_avatar ="07第七章：AI应用与实战/AI智能伴侣资料/pengyuyan头像.jpg"
 
 #初始化AI头像路径
 if 'ai_avatar' not in st.session_state:
-    st.session_state.ai_avatar ="AI智能伴侣资料/gaomu头像.jpg"
+    st.session_state.ai_avatar ="07第七章：AI应用与实战/AI智能伴侣资料/gaomu头像.jpg"
 
 
 #会话的标识
@@ -222,9 +222,9 @@ with st.sidebar:
             st.session_state.nature = "外表古灵精怪爱捉弄，内心温柔细腻暗恋同桌"
 
             # 重置用户头像
-            st.session_state.user_avatar = "AI智能伴侣资料/pengyuyan头像.jpg"
+            st.session_state.user_avatar = "07第七章：AI应用与实战/AI智能伴侣资料/pengyuyan头像.jpg"
             # 重置AI头像
-            st.session_state.ai_avatar = "AI智能伴侣资料/gaomu头像.jpg"
+            st.session_state.ai_avatar = "07第七章：AI应用与实战/AI智能伴侣资料/gaomu头像.jpg"
 
             save_session()
             st.rerun()  # 重新运行页面
@@ -283,8 +283,8 @@ with st.sidebar:
     uploaded_user_avatar = st.file_uploader("上传你的头像", type=["jpg", "jpeg", "png"], key="upload_user")
     if uploaded_user_avatar is not None:
         # 保存上传的文件
-        if not os.path.exists("AI智能伴侣资料/custom"):
-            os.makedirs("AI智能伴侣资料/custom")
+        if not os.path.exists("07第七章：AI应用与实战/AI智能伴侣资料/custom"):
+            os.makedirs("07第七章：AI应用与实战/AI智能伴侣资料/custom")
 
         file_path = f"AI智能伴侣资料/custom/user_avatar.{uploaded_user_avatar.name.split('.')[-1]}"
         with open(file_path, "wb") as f:
